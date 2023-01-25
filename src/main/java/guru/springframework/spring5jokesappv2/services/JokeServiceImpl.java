@@ -8,7 +8,9 @@ public class JokeServiceImpl implements JokeService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    // Não é possível usar injecção de dependências porque é preciso fazer configuração adicional (que ainda não aprendi)
+    // Não é possível usar injecção de dependências porque para isso seria necessário registar manualmente a classe
+    // guru.springframework.norris.chuck.ChuckNorrisQuotes no injector de dependências, por ser uma classe proveniente
+    // de uma library externa, fornecida por terceiros
     public JokeServiceImpl() {
         this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
